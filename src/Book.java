@@ -15,10 +15,10 @@ public class Book {
 
     public void printInfo() {
 
-        System.out.println(title);
-        System.out.println(author);
-        System.out.println(pageCount);
-        System.out.println(available);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Page Count: " + pageCount);
+        System.out.println("Is available?: " + available);
 
     }
 

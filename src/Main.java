@@ -1,5 +1,5 @@
 public class Main {
-    public static void Main (String[] args) {
+    public static void main (String[] args) {
 
         Book book1 = new Book("t1", "a1", 100, true );
 
@@ -11,6 +11,12 @@ public class Main {
         book2.borrow();
         book3.returnBook();
 
+        Reader reader1 = new Reader("Kowalski","Jan",1000100010, 1);
+        Reader reader2 = new Reader("Doe","Jane",1000100010, 1);
+
+        reader1.printData();
+        reader2.increaseBorrowedCount(1);
+        reader2.decreaseBorrowedCount(1);
 
 
     }
