@@ -19,13 +19,13 @@ public class Reader {
         System.out.println("Card number: " + cardNumber);
         System.out.println("Borrowed count: " + borrowedCount);
 
-    } public int increaseBorrowedCount(int amount) {
+    } public void increaseBorrowedCount(int amount) {
 
-        return borrowedCount = borrowedCount + amount;
+        borrowedCount = borrowedCount + amount;
 
-    } public int decreaseBorrowedCount(int amount) {
+    } public void decreaseBorrowedCount(int amount) {
 
-        return borrowedCount = borrowedCount - amount;
+        borrowedCount = borrowedCount - amount;
 
     }
 }

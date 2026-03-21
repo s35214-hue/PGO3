@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Book {
     private String title;
     private String author;
@@ -9,6 +11,38 @@ public class Book {
         this.title = title.toUpperCase();
         this.author = author.toUpperCase();
         this.pageCount = pageCount;
+        this.available = available;
+
+    } public String getTitle() {
+
+        return title;
+
+    } public String getAuthor() {
+
+        return author;
+
+    } public int getPageCount() {
+
+        return pageCount;
+
+    } public boolean getAvailable() {
+
+        return available;
+
+    } public void setTitle(String title) {
+
+        this.title = title;
+
+    } public void setAuthor(String author) {
+
+        this.author = author;
+
+    } public void setPageCount(int pageCount) {
+
+        this.pageCount = pageCount;
+
+    } public void setAvailable(boolean available) {
+
         this.available = available;
 
     }
@@ -31,17 +65,19 @@ public class Book {
             System.out.println("The book you are trying to borrow is currently unavailable.");
         }
 
-    } public void returnBook() {
-        if(!(available)) {
+    }
+
+    public void returnBook() {
+        if (!(available)) {
             System.out.println("Book successfully returned!");
             available = true;
 
         } else {
             System.out.println("This book has already been returned.");
         }
+
     }
 }
-
 
 
 
