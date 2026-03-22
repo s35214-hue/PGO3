@@ -2,6 +2,7 @@ public class Main {
     public static void main (String[] args) {
 
         Library library = new Library(19);
+        Reader reader1 = new Reader("Doe", "Jane", 1001110000, 0);
 
 
 
@@ -9,29 +10,24 @@ public class Main {
 
         library.addBook(book1);
 
-        Book book2 = new Book("t2", "a2", 150, false);
+        Book book2 = new Book("t2", "a2", 150, true);
 
         library.addBook(book2);
 
-        Book book3 = new Book("t3","a3",80, false);
+        Book book3 = new Book("t3","a3",80, true);
 
         library.addBook(book3);
 
-        book1.printInfo();
-        book2.borrow();
-        book3.returnBook();
+        library.printAvailableBooks();
+
+        library.borrowBook("t2", reader1);
 
         library.printAvailableBooks();
-        library.countAvailableBooks();
-        library.findBookByTitle("T2");
 
-        Reader reader1 = new Reader("Kowalski","Jan",1000100010, 1);
-        Reader reader2 = new Reader("Doe","Jane",1000100010, 1);
+        library.returnBook("t2", reader1);
 
-        reader1.printData();
-        reader2.increaseBorrowedCount(1);
-        reader2.decreaseBorrowedCount(1);
-
+        library.printAvailableBooks();
 
     }
+
 }
